@@ -14,4 +14,4 @@ const config = {
     autodocs: "tag",
   },
 };
-export default config;
+module.exports = config
