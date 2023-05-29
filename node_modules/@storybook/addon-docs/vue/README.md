@@ -23,13 +23,13 @@ To learn more about Storybook Docs, read the [general documentation](../README.m
 First add the package. Make sure that the versions for your `@storybook/*` packages match:
 
 ```sh
-yarn add -D @storybook/addon-docs@next
+yarn add -D @storybook/addon-docs
 ```
 
 Then add the following to your `.storybook/main.js` addons:
 
 ```js
-module.exports = {
+export default {
   addons: ['@storybook/addon-docs'],
 };
 ```
@@ -39,9 +39,9 @@ module.exports = {
 The `addon-docs` preset for Vue has a configuration option that can be used to configure [`vue-docgen-api`](https://github.com/vue-styleguidist/vue-styleguidist/tree/dev/packages/vue-docgen-api), a tool which extracts information from Vue components. Here's an example of how to use the preset with options for Vue app:
 
 ```js
-const path = require('path');
+import * as path from 'path';
 
-module.exports = {
+export default {
   addons: [
     {
       name: '@storybook/addon-docs',
@@ -102,7 +102,7 @@ yarn add -D react
 Then update your `.storybook/main.js` to make sure you load MDX files:
 
 ```js
-module.exports = {
+export default {
   stories: ['../src/stories/**/*.stories.@(js|mdx)'],
 };
 ```
@@ -133,18 +133,14 @@ Yes, it's redundant to declare `component` twice. [Coming soon](https://github.c
 
 ## Inline Stories
 
-Storybook Docs renders all Vue stories inside IFrames, with a default height of `60px` (configurable using the `docs.iframeHeight` story parameter).
+Storybook Docs renders all Vue stories inline by default.
 
-Starting in 5.3, you can also render stories inline, and in 6.0 this has become the default behavior. To render inline, update `.storybook/preview.js`:
+However, you can render stories in an iframe, with a default height of `60px` (configurable using the `docs.story.iframeHeight` story parameter), by using the `docs.stories.inline` parameter.
+
+To do so for all stories, update `.storybook/preview.js`:
 
 ```js
-import { addParameters } from '@storybook/vue';
-
-addParameters({
-  docs: {
-    inlineStories: true,
-  },
-});
+export const parameters = { docs: { story: { inline: false } } };
 ```
 
 ## More resources
