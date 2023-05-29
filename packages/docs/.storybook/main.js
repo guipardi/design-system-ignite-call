@@ -1,17 +1,18 @@
-/** @type { import('@storybook/react-vite').StorybookConfig } */
-const config = {
-  stories: ["../stories/**/*.mdx", "../stories/**/*.stories.@(js|jsx|ts|tsx)"],
-  addons: [
+module.exports = {
+  "stories": [
+    "../stories/**/*.stories.mdx",
+    "../stories/**/*.stories.@(js|jsx|ts|tsx)"
+  ],
+  "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/addon-interactions",
+    "@storybook/addon-interactions"
   ],
-  framework: {
-    name: "@storybook/react-vite",
-    options: {},
+  "framework": "@storybook/react",
+  "core": {
+    "builder": "@storybook/builder-vite"
   },
-  docs: {
-    autodocs: "tag",
-  },
-};
-module.exports = config
+  "features": {
+    "storyStoreV7": true
+  }
+}
