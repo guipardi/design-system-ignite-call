@@ -1,4 +1,3 @@
-/** @type { import('@storybook/react-vite').StorybookConfig } */
 const config = {
   stories: ["../stories/**/*.mdx", "../stories/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
@@ -14,4 +13,5 @@ const config = {
     autodocs: "tag",
   },
 };
-export default config;
+
+module.exports = config
