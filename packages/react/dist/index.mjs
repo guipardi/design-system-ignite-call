@@ -119,16 +119,29 @@ var {
 });
 
 // src/index.tsx
-import { jsx } from "react/jsx-runtime";
 var Button = styled("button", {
   fontFamily: "$code",
   backgroundColor: "$ignite300",
-  borderRadius: "$md"
+  borderRadius: "$md",
+  border: "0",
+  fontWeight: "bold",
+  color: "$white",
+  variants: {
+    size: {
+      big: {
+        fontSize: "$16",
+        padding: "$3 $6"
+      },
+      small: {
+        fontSize: "$14",
+        padding: "$2 $4"
+      }
+    }
+  },
+  defaultVariants: {
+    size: "small"
+  }
 });
-var App = () => {
-  return /* @__PURE__ */ jsx(Button, { children: "Enviar" });
-};
 export {
-  App,
   Button
 };
