@@ -1,5 +1,11 @@
 # @guilhermepardi-ignite-ui/react
 
+## 2.0.2
+
+### Patch Changes
+
+- Fix: the release.yml
+
 ## 2.0.1
 
 ### Patch Changes
