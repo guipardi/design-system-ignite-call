@@ -1,0 +1,2 @@
+import{A as t}from"./index.75266b3e.js";import"./index.a2a9f3ce.js";import"./iframe.cc8bae65.js";import"./index.e4d50461.js";import"./jsx-runtime.c4bc573c.js";const p={title:"Data Display/Avatar",component:t,args:{src:"https://github.com/guipardi.png",alt:"Guilherme Pardi Borges"},argTypes:{src:{control:{type:"text"}}}},e={},c={args:{src:void 0}},m=["Primary","WithFallback"];export{e as Primary,c as WithFallback,m as __namedExportsOrder,p as default};
+//# sourceMappingURL=Avatar.stories.a818f8c5.js.map
